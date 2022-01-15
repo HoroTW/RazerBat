@@ -1,6 +1,5 @@
 RazerBat - Very Simple Script to show the Battery of your Razer Mouse
 =====================================================================
 
-This very simple script is tailored to the Razer Viper Ultimate Mouse.
-Add your mouse and give me a pull request - I'll happily extend the script to
-your mouse.
+This very simple script will print the battery status of your razer devices.
+This should work for most of the razer devices - if you have one that doesn't, please let me know.

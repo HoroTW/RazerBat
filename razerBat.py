@@ -1,13 +1,9 @@
 #!/usr/bin/env python3
-
 from openrazer.client import DeviceManager
 
-device_manager = DeviceManager()
-dock = mouse = None
+devices = DeviceManager().devices
+bat_devices = [d for d in devices if d.battery_level]
 
-for device in device_manager.devices:
-    mouse = device if device.name == "Razer Viper Ultimate (Wireless)" else mouse
-    dock = device if device.name == "Razer Mouse Dock" else dock
-
-charging = "" if mouse.is_charging else "🔋"
-print(f"{mouse.name} {charging} {mouse.battery_level}")
+for device in bat_devices:
+    charging = "" if device.is_charging else "🔋"
+    print(f"{device.name} {charging} {device.battery_level}%")
